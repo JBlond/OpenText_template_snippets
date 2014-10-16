@@ -47,3 +47,40 @@ SubIndexes–Displaying Headlines of Child Index Objects
     <output type="object" object="Store:item.Headline" />
   </foreach>
 </reddot:cms>
+
+<%!! Context:Pages.GetPage(Guid:[GUID PAGE B]).GetUrl(Bool: True) !!%>
+<%!! Context:Pages.GetPage(Guid:[GUID PAGE B]).Headline !!%>
+
+
+    ' Time of last change  
+    <%!! Context:CurrentPage.ChangeTime !!%>  
+    ' GUID of user who changed page  
+    <%!! Context:CurrentPage.ChangeUserId !!%>  
+    ' GUID of user who created the page  
+    <%!! Context:CurrentPage.CreateUserId !!%>  
+    ' Getting an element value from a standard element in the current page  
+    <%!! Context:CurrentPage.Elements.GetElement(std_elem).Value !!%>  
+    ' Check if it has a page in current language variant  
+    <%!! Context:CurrentPage.ExistsInCurrentLanguage !!%>  
+    ' ?  
+    <%!! Context:CurrentPage.HasVersionData !!%>  
+    ' Returns headline element of current page  
+    <%!! Context:CurrentPage.Headline !!%>  
+    ' Checks if the page is currently locked  
+    <%!! Context:CurrentPage.IsLocked !!%>  
+    ' GUID of user who has locked current page  
+    <%!! Context:CurrentPage.LockingUserId !!%>  
+    ' Time of last save  
+    <%!! Context:CurrentPage.SaveTime !!%>  
+    ' GUID of user who saved the page  
+    <%!! Context:CurrentPage.SaveUserId !!%>  
+    ' State of the page (for usage/details see link below about usability)  
+    <%!! Context:CurrentPage.State !!%>  
+    ' GUID of the used template for the current page  
+    <%!! Context:CurrentPage.Template.Id !!%>  
+    ' Content class name of the used template for the current page  
+    <%!! Context:CurrentPage.Template.Name !!%>  
+    ' Optimized tag to Get Element Values (version 10.1 SP1 HF1 and above)  
+    <%!! Context:Pages.GetPage(Guid:D72F8CC0B2494BD39A74C52912E6B54E).GetElementByName(elementName).GetHtml() !!%>  
+    ' Tag to reference pages instead of creating links that are followed (version 10.1 SP1 HF1 and above)  
+    <%!! Context:Pages.GetPage(Guid:[GUID PAGE B]).GetUrl(Bool: True) !!%>  
