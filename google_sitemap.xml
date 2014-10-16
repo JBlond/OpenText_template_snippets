@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://<?php echo $_SERVER['HTTP_HOST']; ?>/</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<reddot:cms>
+	<if>
+	<query valuea="Context:CurrentIndex.HasChildren()" operator="==" valueb="Bool:True">
+	<htmltext>
+		<navigation:nextlevel><%!!Escape:Newline!!%>
+	</htmltext>
+	</query>
+	</if>
+	</reddot:cms>
+</urlset>
+
+
+	<url><%!!Escape:Newline!!%>
+		<loc>http://<?php echo $_SERVER['HTTP_HOST']; ?><%!!Context:CurrentIndex.GetUrl()!!%></loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.2</priority>
+	</url><%!!Escape:Newline!!%>
+	<navigation:nextlevel><%!!Escape:Newline!!%>
