@@ -1,0 +1,49 @@
+If the headline of the current page is Newsletter, the following expression returns True.
+
+<%!! Context:CurrentPage.Headline.EndsWith(Str:letter) !!%>
+
+
+<%!! Context:CurrentPage.Headline.Length !!%>
+
+
+
+
+<reddot:cms>
+  <if>
+    <query valuea="Context:CurrentLanguageVariant.Key" 
+           operator="==" valueb="Str:DEU">
+      <htmltext>Hallo Welt!</htmltext>
+    </query>
+    <query type="else">
+      <htmltext>Hello World!</htmltext>
+    </query>
+  </if>
+</reddot:cms>
+
+
+
+<%!! Context:FirstIndex.GetUrl() !!%>  OR <%!! Context:CurrentIndex.GetRootIndex().GetUrl() !!%>
+
+
+URL ohne Navigation manager
+<%!! Context:CurrentPage.GetUrl() !!%>
+
+
+<%!! Context:CurrentPage.Headline !!%>
+<%!! Context:CurrentIndex.Headline !!%>
+<%!! Context:CurrentIndex.Page.Headline !!%>
+
+
+
+SubIndexes–Displaying Headlines of Child Index Objects
+<reddot:cms>
+<foreach itemname="item" object="Context:CurrentIndex.SubIndexes" 
+         countername="counter">
+    <if>
+      <query valuea="Store:counter" operator="!=" valueb="Int:0">
+        <output type="string">, </output>
+      </query>
+    </if>
+    <output type="object" object="Store:item.Headline" />
+  </foreach>
+</reddot:cms>
