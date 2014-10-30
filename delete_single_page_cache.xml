@@ -1,0 +1,5 @@
+<IODATA loginguid="<%[!guid_login!]%>"sessionkey="<%[!sessionkey!]%>">
+	<PBCACHE action="update" projectguid="<%[!guid_project!]%>">
+		<PAGE headline="<%[!page_headl!]%>" actionflag="65536" guid="<%[!guid_page!]%>"></PAGE>
+	</PBCACHE>
+</IODATA> 
