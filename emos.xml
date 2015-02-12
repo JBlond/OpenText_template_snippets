@@ -1,0 +1,22 @@
+
+		<!IoRangeNoRedDotMode>
+		<script type="text/javascript">
+		if (typeof(window.emosPropertiesEvent) != "function"){
+			window.emosPropertiesEvent = function (){
+				return;
+			};
+		}
+		window.emosTrackVersion = 2;
+		</script>
+		<script type="text/javascript" src="<%med_emos2_js%>"></script>
+		<!/IoRangeNoRedDotMode>
+
+		<!IoRangeNoRedDotMode>
+		<script type="text/javascript">
+		var emospro = {};
+		emospro.pageId = '<%stf_emospro_pageId%>';
+		emospro.content = '<%stf_emospro_content%>';
+		emospro.siteid = '<%stf_emospro_siteid%>';
+		window.emosPropertiesEvent(emospro);
+		</script>
+		<!/IoRangeNoRedDotMode>
