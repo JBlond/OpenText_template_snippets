@@ -1,0 +1,21 @@
+<reddot:cms>
+  <if>
+    <query valuea="Context:CurrentIndex.Id" operator="==" valueb="Context:FirstIndex.Id">
+      <if>
+        <query valuea="Context:CurrentIndex.Id" operator="==" valueb="Context:LastIndex.Id">
+          <htmltext>/<%!! Escape:HtmlEncode(Context:CurrentIndex.Headline) !!%></htmltext></query><query type="else"><htmltext>/<%!! Escape:HtmlEncode(Context:CurrentIndex.Headline) !!%><navigation:nextlevel></htmltext>
+        </query>
+      </if>
+    </query>
+    <query type="else">
+      <if>
+        <query valuea="Context:CurrentIndex.Id" operator="==" valueb="Context:LastIndex.Id">
+          <htmltext></htmltext>
+        </query>
+        <query type="else">
+          <htmltext>/<%!! Escape:HtmlEncode(Context:CurrentIndex.Headline) !!%><navigation:nextlevel></htmltext>
+        </query>
+      </if>
+    </query>
+  </if>
+</reddot:cms>
