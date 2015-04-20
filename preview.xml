@@ -1,0 +1,4 @@
+<script type="text/javascript">
+function openPreview()    { window.open( '/CMS/ioRD.asp?Action=Preview&Pageguid=<%inf_page_guid%>', 'Preview', 'top=20, left=20, width=850, height=598, scrollbars=yes, resizable=yes' ); }
+</script>
+<a id="RdPreview" href="javascript:openPreview();">Preview</a>
