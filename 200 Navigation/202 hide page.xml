@@ -1,0 +1,9 @@
+<reddot:cms>
+    <if>
+        <query valuea="Context:CurrentPage.Elements.GetElement(opt_show_in_navigation).GetHtml()" operator="!=" valueb="hide"> 
+            <htmltext>
+                <li><a href="<%!! Context:CurrentIndex.GetUrl() !!%>"><%!! Context:CurrentIndex.Headline !!%></a></li>
+            </htmltext>
+        </query>
+    </if>
+</reddot:cms>
