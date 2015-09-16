@@ -1,4 +1,4 @@
-If the headline of the current page is Newsletter, the following expression returns True.
+﻿If the headline of the current page is Newsletter, the following expression returns True.
 
 <%!! Context:CurrentPage.Headline.EndsWith(Str:letter) !!%>
 
@@ -50,6 +50,8 @@ SubIndexes–Displaying Headlines of Child Index Objects
 
 <%!! Context:Pages.GetPage(Guid:[GUID PAGE B]).GetUrl(Bool: True) !!%>
 <%!! Context:Pages.GetPage(Guid:[GUID PAGE B]).Headline !!%>
+
+<%!! Context:CurrentPage.Id.ToString(N).ToUpper() !!%>
 
 
     ' Time of last change  
